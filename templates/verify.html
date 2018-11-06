@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <div class="login100-pic js-tilt" data-tilt>
+        <img src="{{ url_for('static', filename='images/_classroom_login.png') }}" alt="IMG">
+      </div>
+
+      <form class="login100-form validate-form" action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <span class="login100-form-title">
+          Verify
+        </span>
+
+        <div class="wrap-input100 validate-input" data-validate = "Email is required">
+          {{ form.email(size=32, class='input100', placeholder='Email') }}
+          <span class="focus-input100"></span>
+
+        </div>
+        <div class="wrap-input100 validate-input" data-validate = "Code is required">
+          {{ form.numbercode(size=32, class='input100', placeholder='Code') }}
+          <span class="focus-input100"></span>
+
+        </div>
+
+
+        <div class="container-login100-form-btn">
+          <button class="login100-form-btn" type='submit'>
+            Verify
+          </button>
+        </div>
+
+        <div class="text-center p-t-12">
+          <span class="txt1">
+            Didn't receive a
+          </span>
+          <a class="txt2" href="#">
+            Code? Send again!
+          </a>
+        </div>
+
+        <div class="text-center p-t-136">
+          <a class="txt2" href="{{ url_for('home') }}">
+            Back to the home page
+            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="text-center">
+          <a class="txt2" href="{{ url_for('login') }}">
+            Login to your account
+            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="text-center">
+          <a class="txt2" href="{{ url_for('register') }}">
+            Create your Account
+            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

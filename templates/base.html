@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Alice Assistant </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Sumon Rahman">
+    <meta name="description" content="">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+
+    <link rel="shortcut icon" type="image/ico" href="{{ url_for('static', filename='images/logofinal.png') }}" />
+    <!-- Plugin-CSS -->
+    <link rel="stylesheet" href="  {{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="  {{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/linearicons.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <!-- Main-Stylesheets -->
+    <link rel="stylesheet" href="  {{ url_for('static', filename='css/normalize.css') }}">
+
+  {% if request.path == '/login' or request.path == '/register' or request.path == '/verify' %}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/hamburgers.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/select2.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/util.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet">
+  {% else %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  {% endif %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <script src="  {{ url_for('static', filename='js/vendor/modernizr-2.8.3.min.js') }}"></script>
+
+
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway|Roboto" rel="stylesheet">
+    <!--
+    Include Fonts:
+      font-family: 'Roboto', sans-serif;
+      font-family: 'Raleway', sans-serif;
+      font-family: 'Josefin Sans', sans-serif;
+
+    -->
+
+
+  </head>
+
+  <body>
+    <!-- Preloader-content -->
+    <div class="preloader">
+        <span><i class="lnr lnr-sun"></i></span>
+    </div>
+    <!-- MainMenu-Area -->
+    {% if request.path == '/' %}
+    <nav class="mainmenu-area" data-spy="affix" data-offset-top="200">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary_menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='images/coverpng1.png') }}" alt="Logo"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="primary_menu">
+                <ul class="nav navbar-nav mainmenu">
+                    <li class="active"><a href="#home_page">Home</a></li>
+                    <li><a href="#about_page">About</a></li>
+                    <li><a href="#features_page">Features</a></li>
+                    <li><a href="#price_page">Pricing</a></li>
+                    <li><a href="#questions_page">FAQ</a></li>
+                    <li><a href="#contact_page">Contacts</a></li>
+                </ul>
+                <div class="right-button hidden-xs">
+                    <a href="{{ url_for('register') }}">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% endif %}
+    {% block content %}
+
+
+    {% endblock %}
+
+
+
+
+    <div class="flash" id="snackbar">
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
+      <script>
+        var toastHTML = '<span>{{message}}</span>';
+
+        var category = '{{ category }}'
+
+
+        setTimeout(function() {
+          $('.flash').append(toastHTML);
+          $('#snackbar').addClass('show pulse');
+
+        }, 1200);
+
+        setTimeout(function() {
+          $('#snackbar').removeClass('show pulse');
+        }, 4200);
+
+      </script>
+
+      {% endfor %} {% endif %} {% endwith %}
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/vendor/jquery-1.12.4.min.js') }} "></script>
+    <script src="{{ url_for('static', filename='js/vendor/jquery-ui.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
+    <!--Plugin-JS-->
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/contact-form.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ajaxchimp.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scrollUp.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+    <!--Main-active-JS-->
+
+    {% if request.path == '/login' or request.path == '/register' or request.path == '/verify' %}
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/select2.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/tilt.jquery.min.js') }}"></script>
+    <script >
+      $('.js-tilt').tilt({
+        scale: 1.1
+      })
+    </script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% else %}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% endif %}
+
+  </body>
+</html>

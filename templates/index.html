@@ -1,0 +1,478 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<header class="home-area overlay" id="home_page">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 hidden-sm col-md-5">
+                <figure class="mobile-image wow fadeInUp" data-wow-delay="0.2s">
+                    <img src="{{ url_for('static', filename='images/header-mobile.png') }}" alt="">
+                </figure>
+            </div>
+            <div class="col-xs-12 col-md-7">
+                <div class="space-80 hidden-xs"></div>
+                <h1 class="wow fadeInUp raleway" data-wow-delay="0.4s">Never once forget your homework!</h1>
+                <div class="space-20"></div>
+                <div class="desc wow fadeInUp josefin" data-wow-delay="0.6s">
+                    <p>With Alice, you will never forget what homework you have. Whether it is that big test in 3 days or the worksheet due friday, Alice remembers it all.</p>
+                </div>
+                <div class="space-20"></div>
+                <a href="{{ url_for('register') }}" class="bttn-white wow fadeInUp" data-wow-delay="0.8s"><i class="lnr lnr-download"></i>Sign Up</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="section-padding" id="about_page">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-10 col-md-offset-1">
+                <div class="page-title text-center">
+                    <img src="{{ url_for('static', filename='images/about-logo.png') }}" alt="About Logo">
+                    <div class="space-20"></div>
+                    <h5 class="title">ABOUT ALICE HA</h5>
+                    <div class="space-30"></div>
+                    <h3 class="blue-color raleway">Alice is a wonderful texting bot that you can text at any time! She tracks all your homework and lets you know whenever you have some!</h3>
+                    <div class="space-20"></div>
+                    <p class='raleway'>Alice allows students in any setting; college, elementary, high school, home schooled, to never forget what they had for homework. What is better than that?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="progress-area gray-bg" id="progress_page">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="page-title section-padding">
+                    <h5 class="title wow fadeInUp" data-wow-delay="0.2s">OUR MOTTO</h5>
+                    <div class="space-10"></div>
+                    <h3 class="dark-color wow fadeInUp raleway" data-wow-delay="0.4s">Alice is always there</h3>
+                    <div class="space-20"></div>
+                    <div class="desc wow fadeInUp" data-wow-delay="0.6s">
+                        <p class='josefin'>Alice is just a text away from reminding you what homework you have. Send her a text like "Hey alice, do I have homework?" or "Alice, what do I have for english?" and Alice will respond instantly</p>
+                    </div>
+                    <div class="space-50"></div>
+                    <a href="{{ url_for('register') }}" class="bttn-default wow fadeInUp" data-wow-delay="0.8s">Sign Up!</a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <figure class="mobile-image">
+                    <img src="{{ url_for('static', filename='images/progress-phone.png') }}" alt="">
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Progress-Area-End -->
+<!-- Video-Area -->
+<section class="video-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="video-photo">
+                    <img src="{{ url_for('static', filename='images/video-image.jpg') }}" alt="">
+                    <a href="https://www.youtube.com/watch?v=ScrDhTsX0EQ" class="popup video-button">
+                        <img src="{{ url_for('static', filename='images/play-button.png') }}" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-5 col-md-offset-1">
+                <div class="space-60 hidden visible-xs"></div>
+                <div class="page-title">
+                    <h5 class="title wow fadeInUp" data-wow-delay="0.2s">VIDEO FEATURES</h5>
+                    <div class="space-10"></div>
+                    <h3 class="dark-color wow fadeInUp raleway" data-wow-delay="0.4s">Grat Application Ever</h3>
+                    <div class="space-20"></div>
+                    <div class="desc wow fadeInUp" data-wow-delay="0.6s">
+                        <p class='raleway'>Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore et laborused sed do eiusmod tempor incididunt ut labore et laborused.</p>
+                    </div>
+                    <div class="space-50"></div>
+                    <a href="#" class="bttn-default wow fadeInUp" data-wow-delay="0.8s">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Video-Area-End -->
+<!-- Feature-Area -->
+<section class="feature-area section-padding-top" id="features_page">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                <div class="page-title text-center">
+                    <h5 class="title">Features</h5>
+                    <div class="space-10"></div>
+                    <h3 class='raleway'>Powerful Features As Always</h3>
+                    <div class="space-60"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="box-icon">
+                        <i class="lnr lnr-rocket"></i>
+                    </div>
+                    <h4>Fast</h4>
+                    <p>Alice is always waiting for your text. Never miss out on homework.</p>
+                </div>
+                <div class="space-60"></div>
+                <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="box-icon">
+                        <i class="lnr lnr-paperclip"></i>
+                    </div>
+                    <h4>Simple</h4>
+                    <p>Alice is always with you. Pull out your phone and send a text.</p>
+                </div>
+                <div class="space-60"></div>
+                <div class="service-box wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="box-icon">
+                        <i class="lnr lnr-cloud-download"></i>
+                    </div>
+                    <h4>Powered by AI</h4>
+                    <p>Alice is powered by AI so she will not ever miss a homework assignment.</p>
+                </div>
+                <div class="space-60"></div>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-4">
+                <figure class="mobile-image">
+                    <img src="{{ url_for('static', filename='images/feature-image.png') }}" alt="Feature Photo">
+                </figure>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="box-icon">
+                        <i class="lnr lnr-clock"></i>
+                    </div>
+                    <h4>Memorable</h4>
+                    <p>Alice is able to text you whenever you get home, that way you will always have time to complete your homework.</p>
+                </div>
+                <div class="space-60"></div>
+                <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="box-icon">
+                        <i class="lnr lnr-laptop-phone"></i>
+                    </div>
+                    <h4>Freedom</h4>
+                    <p>Spend more time enjoying yourself than worrying about what homework you have.</p>
+                </div>
+                <div class="space-60"></div>
+                <div class="service-box wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="box-icon">
+                        <i class="lnr lnr-cog"></i>
+                    </div>
+                    <h4>Enjoyable</h4>
+                    <p>Alice will make your life better. Never question your grades again.</p>
+                </div>
+                <div class="space-60"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div class="page-title">
+                    <h5 class="title wow fadeInUp" data-wow-delay="0.2s">Our features</h5>
+                    <div class="space-10"></div>
+                    <h3 class="dark-color wow fadeInUp" data-wow-delay="0.4s">Aour Approach of Design is Prety Simple and Clear</h3>
+                </div>
+                <div class="space-20"></div>
+                <div class="desc wow fadeInUp" data-wow-delay="0.6s">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore et laborused sed do eiusmod tempor incididunt ut labore et laborused.</p>
+                </div>
+                <div class="space-50"></div>
+                <a href="#" class="bttn-default wow fadeInUp" data-wow-delay="0.8s">Learn More</a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1">
+                <div class="space-60 hidden visible-xs"></div>
+                <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="box-icon">
+                        <i class="lnr lnr-clock"></i>
+                    </div>
+                    <h4>Easy Notifications</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+                <div class="space-50"></div>
+                <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="box-icon">
+                        <i class="lnr lnr-laptop-phone"></i>
+                    </div>
+                    <h4>Fully Responsive</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+                <div class="space-50"></div>
+                <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="box-icon">
+                        <i class="lnr lnr-cog"></i>
+                    </div>
+                    <h4>Editable Layout</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="download-area overlay">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 hidden-sm">
+                <figure class="mobile-image">
+                    <img src="{{ url_for('static', filename='images/download-image.png') }}" alt="">
+                </figure>
+            </div>
+            <div class="col-xs-12 col-md-6 section-padding">
+                <h3 class="white-color raleway">Create an Account Now</h3>
+                <div class="space-20"></div>
+                <p class='josefin'>No more stress because you forgot to study for that big test on Thursday. No more pestering calls home from your teacher or parents wondering why your grades dropped.</p>
+                <div class="space-60"></div>
+                <a href="{{ url_for('login') }}" class="bttn-white sq">Login</a>
+                <a href="{{ url_for('register') }}" class="bttn-white sq">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Download-Area-End -->
+<!--Price-Area -->
+<section class="section-padding price-area" id="price_page">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="page-title text-center">
+                    <h5 class="title">Pricing Plan</h5>
+                    <h3 class="dark-color josefin">Our glorious, cheap, plans</h3>
+                    <div class="space-60"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="price-box">
+                    <div class="price-header">
+                        <div class="price-icon">
+                            <span class="lnr lnr-rocket"></span>
+                        </div>
+                        <h4 class="upper">I'm Broke - Send Help</h4>
+                    </div>
+                    <div class="price-body">
+                        <ul>
+                            <li>Up to 100 Texts a month</li>
+                            <li>Unlimited support</li>
+                            <li>No credit card needed</li>
+                            <li>Simple Setup, Basic Services</li>
+                        </ul>
+                    </div>
+                    <div class="price-rate">
+                        <sup>&#36;</sup> <span class="rate">0</span> <small>/Month</small>
+                    </div>
+                    <div class="price-footer">
+                        <a href="#" class="bttn-white">Purchase</a>
+                    </div>
+                </div>
+                <div class="space-30 hidden visible-xs"></div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="price-box">
+                    <div class="price-header">
+                        <div class="price-icon">
+                            <span class="lnr lnr-diamond"></span>
+                        </div>
+                        <h4 class="upper">"Why are your grades so bad?"</h4>
+                    </div>
+                    <div class="price-body">
+                        <ul>
+                            <li>Unlimited Texts to Alice</li>
+                            <li>Unlimited support</li>
+                            <li>Text you at a certain time everyday</li>
+                            <li>Simple Setup, Advanced Services</li>
+                        </ul>
+                    </div>
+                    <div class="price-rate">
+                        <sup>&#36;</sup> <span class="rate">7</span> <small>/Month</small>
+                    </div>
+                    <div class="price-footer">
+                        <a href="#" class="bttn-white">Purchase</a>
+                    </div>
+                </div>
+                <div class="space-30 hidden visible-xs"></div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="price-box">
+                    <div class="price-header">
+                        <div class="price-icon">
+                            <span class="lnr lnr-pie-chart"></span>
+                        </div>
+                        <h4 class="upper">I always forget my homework</h4>
+                    </div>
+                    <div class="price-body">
+                        <ul>
+                          <li>Unlimited Texts to Alice</li>
+                          <li>Unlimited support</li>
+                          <li>Text you at a certain time everyday</li>
+                          <li>Automatically delete your homework</li>
+                          <li>Simple Setup, Mastermind Services</li>
+                        </ul>
+                    </div>
+                    <div class="price-rate">
+                        <sup>&#36;</sup> <span class="rate">12</span> <small>/Month</small>
+                    </div>
+                    <div class="price-footer">
+                        <a href="#" class="bttn-white">Purchase</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Price-Area-End -->
+<!--Questions-Area -->
+<section id="questions_page" class="questions-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="page-title text-center">
+                    <h5 class="title">FAQ</h5>
+                    <h3 class="dark-color raleway">Frequently Asked Questions</h3>
+                    <div class="space-60"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div class="toggole-boxs">
+                    <h3>What happens if I go over 100 texts? </h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <h3>Is all of my data safe?</h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <h3>Do you offer refunds? </h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="space-20 hidden visible-xs"></div>
+                <div class="toggole-boxs">
+                    <h3>Faq second question goes here? </h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <h3>Third faq question goes here? </h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <h3>Why more question goes here? </h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <h3>Seventh frequent question here? </h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Questions-Area-End -->
+<!-- Subscribe-Form -->
+<div class="subscribe-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                <div class="subscribe-form text-center">
+                    <h3 class="blue-color">Subscribe For Student Help</h3>
+                    <div class="space-20"></div>
+                    <form id="mc-form">
+                        <input type="email" class="control" placeholder="Enter your email" required="required" id="mc-email">
+                        <button class="bttn-white active" type="submit"><span class="lnr lnr-location"></span> Subscribe</button>
+                        <label class="mt10" for="mc-email"></label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Subscribe-Form-Area -->
+<!-- Footer-Area -->
+<footer class="footer-area" id="contact_page">
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="page-title text-center">
+                        <h5 class="title">Contact US</h5>
+                        <h3 class="dark-color">Find us here!</h3>
+                        <div class="space-60"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="footer-box">
+                        <div class="box-icon">
+                            <span class="lnr lnr-map-marker"></span>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="space-30 hidden visible-xs"></div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="footer-box">
+                        <div class="box-icon">
+                            <span class="lnr lnr-phone-handset"></span>
+                        </div>
+                        <p>+1 8609667758</p>
+                    </div>
+                    <div class="space-30 hidden visible-xs"></div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="footer-box">
+                        <div class="box-icon">
+                            <span class="lnr lnr-envelope"></span>
+                        </div>
+                        <p>alice.assistant.reminders@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer-Bootom -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-5">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        <span>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="lnr lnr-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></span>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    <div class="space-30 hidden visible-xs"></div>
+                </div>
+                <div class="col-xs-12 col-md-7">
+                    <div class="footer-menu">
+                        <ul>
+                          <li><a href="#about_page">About</a></li>
+                          <li><a href="#features_page">Features</a></li>
+                          <li><a href="#price_page">Pricing</a></li>
+                          <li><a href="#questions_page">FAQ</a></li>
+                          <li><a href="#contact_page">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer-Bootom-End -->
+</footer>
+
+
+{% endblock %}

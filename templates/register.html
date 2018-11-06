@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <div class="login100-pic js-tilt" data-tilt>
+        <img src="{{ url_for('static', filename='images/_classroom_login.png') }}" alt="IMG">
+      </div>
+
+      <form class="login100-form validate-form" action="" method="post" style='margin-top: -100px; padding-top; -50px;' novalidate>
+        {{ form.hidden_tag() }}
+        <span class="login100-form-title">
+          Register
+        </span>
+        <div class="wrap-input100 validate-input" data-validate = "Valid Name is required: First Name Last Name">
+
+          {{ form.name(size=32, class='input100', placeholder='Name') }}
+          {% for error in form.name.errors %}
+          <span style="color: red;">{{ error }}</span>
+          {% endfor %}
+          <span class="focus-input100"></span>
+
+        </div>
+        <div class="wrap-input100 validate-input" data-validate = "Valid Username is required">
+
+          {{ form.username(size=32, class='input100', placeholder='Username') }}
+          {% for error in form.username.errors %}
+          <span style="color: red;">{{ error }}</span>
+          {% endfor %}
+          <span class="focus-input100"></span>
+
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+
+          {{ form.email(size=32, class='input100', placeholder='Email') }}
+          {% for error in form.email.errors %}
+          <span style="color: red;">{{ error }}</span>
+          {% endfor %}
+          <span class="focus-input100"></span>
+
+        </div>
+        <div class="wrap-input100 validate-input" data-validate = "Valid Number is required: 8601112234">
+
+          {{ form.number(size=32, class='input100', placeholder='Phone Number') }}
+          {% for error in form.number.errors %}
+          <span style="color: red;">{{ error }}</span>
+          {% endfor %}
+          <span class="focus-input100"></span>
+
+        </div>
+        <div class="wrap-input100 validate-input" data-validate = "Invalid Password">
+
+          {{ form.password(size=32, class='input100', placeholder='Password') }}
+          {% for error in form.password.errors %}
+          <span style="color: red;">{{ error }}</span>
+          {% endfor %}
+          <span class="focus-input100"></span>
+
+        </div>
+        <div class="wrap-input100 validate-input" data-validate = "Passwords Must Match">
+
+          {{ form.password2(size=32, class='input100', placeholder='Confirm Password') }}
+          {% for error in form.password2.errors %}
+          <span style="color: red;">{{ error }}</span>
+          {% endfor %}
+          <span class="focus-input100"></span>
+
+        </div>
+
+
+
+        <div class="container-login100-form-btn">
+          <button class="login100-form-btn" type='submit'>
+            Register
+          </button>
+        </div>
+
+
+        <div class="text-center p-t-136">
+          <a class="txt2" href="{{ url_for('home') }}">
+            Back to the home page
+            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="text-center">
+          <a class="txt2" href="{{ url_for('login') }}">
+            Already Have an account? Login
+            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
